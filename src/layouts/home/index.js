@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Template contentsCentered>
       <Head>
-        <title>Home</title>
+        <title>Pixelbonds</title>
       </Head>
       <div className={styles.container}>
         <div className={styles.hero}>
