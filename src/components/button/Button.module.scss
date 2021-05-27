@@ -1,0 +1,16 @@
+.Button {
+  background-color: var(--colorPrimary500);
+  border-radius: var(--radiusBase);
+  border: none;
+  color: var(--colorWhite);
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+}
+
+.Bold {
+  font-weight: 600;
+}
+
+.Disabled {
+  cursor: not-allowed;
+}

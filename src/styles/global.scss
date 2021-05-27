@@ -1,6 +1,14 @@
 @import '~normalize.css/normalize.css';
 
 :root {
+  // Common
+  --colorWhite: #ffffff;
+  --colorBlack: #303030;
+
+  --radiusSmall: 0.2rem;
+  --radiusBase: 0.4rem;
+  --radiusLarge: 0.6rem;
+
   --colorBackground: #ffffff;
   --colorForeground: #303030;
 

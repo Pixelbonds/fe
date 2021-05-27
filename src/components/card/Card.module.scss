@@ -1,0 +1,34 @@
+.Card {
+  margin-bottom: var(--spacingExtraTight);
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  .Thumb {
+    margin-bottom: var(--spacingExtraTight);
+    position: relative;
+    img {
+      max-width: 100%;
+    }
+    svg {
+      color: rgba(255, 255, 255, 0.4);
+      bottom: 1.5rem;
+      right: 1.5rem;
+      position: absolute;
+      height: 36px;
+      width: 36px;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.Bold {
+  font-weight: 600;
+}
+
+.Disabled {
+  cursor: not-allowed;
+}

@@ -6,15 +6,17 @@ $header-height: 7rem;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--spacingBase);
-  .logo {
-    font-size: 2.2rem;
-    font-weight: 700;
-    position: relative;
-  }
   .nav {
     display: flex;
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      position: relative;
+      margin-right: var(--spacingLoose);
+    }
     .navItem {
       display: flex;
+      align-items: center;
       font-weight: 600;
       &:not(:last-of-type) {
         margin-right: var(--spacingExtraTight);

@@ -5,20 +5,25 @@ $container-width: 1200px;
 }
 
 .hero {
-  padding: 4rem 0;
+  background-color: var(--colorPrimary50);
+  margin-bottom: var(--spacingExtraLoose);
+  padding: 2rem 0;
+  text-align: center;
   @media (min-width: 768px) {
-    padding: 10rem 0;
+    padding: var(--spacingExtraLoose) 0;
   }
   h1 {
     font-size: 4rem;
-    font-weight: 800;
     line-height: 4.2rem;
-    font-weight: 800;
-    margin-bottom: 2.6rem;
+    font-weight: 600;
+    margin-bottom: var(--spacingExtraTight);
     @media (min-width: 768px) {
-      font-size: 6rem;
+      font-size: 5rem;
       line-height: 7.2rem;
     }
+  }
+  .container {
+    margin-bottom: 0;
   }
   h2 {
     font-size: 2rem;
@@ -37,30 +42,9 @@ $container-width: 1200px;
 
 .feedGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  gap: var(--spacingBase);
+  grid-template-columns: repeat(2, 1fr);
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacingBase);
-  }
-}
-
-.feed {
-  margin-bottom: var(--spacingExtraLoose);
-  .postPreview {
-    position: relative;
-    svg {
-      color: rgba(255, 255, 255, 0.4);
-      bottom: 1.5rem;
-      right: 1.5rem;
-      position: absolute;
-      height: 36px;
-      width: 36px;
-    }
-  }
-  img {
-    max-width: 100%;
-  }
-  @media (min-width: 768px) {
-    margin-bottom: 0;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
