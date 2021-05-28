@@ -1,13 +1,18 @@
-.Card {
+.card {
   margin-bottom: var(--spacingExtraTight);
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
-  .Thumb {
+  .thumb {
     margin-bottom: var(--spacingExtraTight);
     position: relative;
-    img {
-      max-width: 100%;
+    .image {
+      background-size: cover;
+      background-position: center;
+      background-color: var(--colorPrimary500);
+      border-radius: var(--radiusLarge);
+      padding-top: 75%;
+      width: 100%;
     }
     svg {
       color: rgba(255, 255, 255, 0.4);
@@ -23,12 +28,4 @@
     font-weight: 500;
     margin: 0;
   }
-}
-
-.Bold {
-  font-weight: 600;
-}
-
-.Disabled {
-  cursor: not-allowed;
 }

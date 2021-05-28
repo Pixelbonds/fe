@@ -1,6 +1,7 @@
 module.exports = {
   env: {
-    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    SITE_URL: process.env.SITE_URL,
+    NEXTAUTH_URL: process.env.SITE_URL,
     NEXTAUTH_USERNAME: process.env.NEXTAUTH_USERNAME,
     NEXTAUTH_PASSWORD: process.env.NEXTAUTH_PASSWORD,
   },
