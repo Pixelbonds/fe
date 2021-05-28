@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import classNames from 'classnames';
+import { makeRelUrl } from 'helpers';
 import styles from './Card.module.scss';
 
 function Card({ title, url, thumbnail, favorites, category }) {
   return (
-    <Link href={url}>
+    <Link href={makeRelUrl(url)}>
       <a>
         <article className={styles.card}>
           <div className={styles.hover} />

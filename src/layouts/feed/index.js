@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Head from 'next/head';
+import { apiUrl } from 'config';
 import { SeoTags } from 'helpers';
 import { useSession } from 'next-auth/client';
 import { Card } from 'components';
 import Template from 'layouts/templates/default';
+import { fetchAPI } from 'helpers';
 import styles from './Feed.module.scss';
 
-export default function Feed() {
+export default function Feed({ resources }) {
   const [feedData, setFeedData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [session] = useSession();
@@ -24,7 +25,7 @@ export default function Feed() {
     fetchPosts();
   }, []);
 
-  console.log(feedData);
+  console.log(resources);
 
   return (
     <Template>
@@ -54,4 +55,17 @@ export default function Feed() {
       </div>
     </Template>
   );
+}
+
+export async function getStaticPaths() {
+  const resources = await fetchAPI('/resources');
+
+  return {
+    paths: resources.map((article) => ({
+      params: {
+        slug: article.slug,
+      },
+    })),
+    fallback: false,
+  };
 }
