@@ -9,10 +9,12 @@
     .image {
       background-size: cover;
       background-position: center;
-      background-color: var(--colorPrimary500);
+      background-color: #eee;
+      animation: skeletonAnimation 0.8s linear infinite alternate;
       border-radius: var(--radiusLarge);
       padding-top: 75%;
       width: 100%;
+      will-change: opacity;
     }
     svg {
       color: rgba(255, 255, 255, 0.4);

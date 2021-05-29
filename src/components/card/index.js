@@ -11,7 +11,7 @@ function Card({ title, url, thumbnail, favorites, category }) {
       <a>
         <article className={styles.card}>
           <div className={styles.hover} />
-          <div className={classNames(styles.thumb)}>
+          <div className={classNames(styles.thumb, 'skeleton')}>
             <div
               className={styles.image}
               style={{ backgroundImage: `url(${thumbnail})` }}

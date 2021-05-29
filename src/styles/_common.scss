@@ -40,3 +40,12 @@ $mediaMinWidth: 480px;
     }
   }
 }
+
+@keyframes skeletonAnimation {
+  0% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.9;
+  }
+}

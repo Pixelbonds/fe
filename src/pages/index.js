@@ -1,7 +1,7 @@
 import React from 'react';
 import Homepage from 'layouts/home';
 
-export const Home = () => {
+const Home = () => {
   return <Homepage />;
 };
 
