@@ -12,9 +12,6 @@ export default function Header() {
         <Link href="/explore">
           <a className={styles.navItem}>Explore</a>
         </Link>
-        <Link href="/feed">
-          <a className={styles.navItem}>Categories</a>
-        </Link>
       </div>
       <div className={styles.rightNav}>
         <Button bold>Submit</Button>

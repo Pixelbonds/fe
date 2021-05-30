@@ -31,7 +31,7 @@ const Explore = ({ slug, data }) => {
           <div className={styles.hero}>
             <div className={styles.container}>
               <h1>{categoryData.Name}</h1>
-              <p>206 amazing pastel designs</p>
+              <p>{posts.length} amazing pastel designs</p>
             </div>
           </div>
           <Explorepage posts={posts} />

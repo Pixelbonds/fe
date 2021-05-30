@@ -2,50 +2,80 @@
 }
 
 .hero {
-  padding: 4rem 0;
+  background-color: var(--colorPrimary50);
+  margin-bottom: var(--spacingExtraLoose);
+  padding: 2rem 0;
+  text-align: center;
   @media (min-width: 768px) {
-    padding: 10rem 0;
+    padding: var(--spacingExtraLoose) 0;
   }
   h1 {
     font-size: 4rem;
-    font-weight: 800;
     line-height: 4.2rem;
-    font-weight: 800;
-    margin-bottom: 2.6rem;
+    font-weight: 600;
+    margin-bottom: var(--spacingExtraTight);
     @media (min-width: 768px) {
-      font-size: 6rem;
+      font-size: 5rem;
       line-height: 7.2rem;
     }
   }
-  h2,
-  .links {
+  .container {
+    margin-bottom: 0;
+  }
+  h2 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 3rem;
-    width: 80%;
     @media (min-width: 768px) {
       font-size: 2.6rem;
       line-height: 4rem;
-    }
-  }
-  .links {
-    .ctaLink {
-      &:first-of-type {
-        padding-left: 0;
-      }
     }
   }
   h1,
   h2 {
     margin-top: 0;
   }
-  .links {
-    display: flex;
-    gap: var(--spacingBase);
-  }
 }
 
-.featuredProjects {
-  background-color: var(--colorPrimary50);
-  padding: 10rem 0;
+.categoryGrid {
+  display: grid;
+  gap: var(--spacingBase);
+  grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    margin-bottom: var(--spacingExtraTight);
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+    .thumb {
+      margin-bottom: var(--spacingExtraTight);
+      position: relative;
+      .image {
+        background-size: cover;
+        background-position: center;
+        background-color: #eee;
+        animation: skeletonAnimation 0.8s linear infinite alternate;
+        border-radius: var(--radiusLarge);
+        padding-top: 60%;
+        width: 100%;
+        will-change: opacity;
+      }
+      svg {
+        color: rgba(255, 255, 255, 0.4);
+        bottom: 1.5rem;
+        right: 1.5rem;
+        position: absolute;
+        height: 36px;
+        width: 36px;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
 }
