@@ -15,15 +15,65 @@ $header-height: 7rem;
       margin-right: var(--spacingLoose);
     }
     .navItem {
+      cursor: pointer;
       display: flex;
       align-items: center;
       font-weight: 600;
+      position: relative;
+      svg {
+        margin-right: 0.4rem;
+        height: 2rem;
+        width: 2rem;
+      }
       &:not(:last-of-type) {
         margin-right: var(--spacingExtraTight);
       }
       @media (min-width: 401px) {
         &:not(:last-of-type) {
           margin-right: var(--spacingBase);
+        }
+      }
+      .dropdown {
+        background-color: var(--colorBackground);
+        display: block;
+        padding: var(--spacingExtraTight);
+        left: calc(-1 * var(--spacingExtraTight));
+        top: calc(100% + var(--spacingExtraTight));
+        position: absolute;
+        transition: top 100ms ease-in, opacity 100ms ease-in-out;
+        width: 30rem;
+        .categoryGrid {
+          display: grid;
+          gap: var(--spacingExtraTight);
+          grid-template-columns: repeat(2, 1fr);
+          a {
+            display: flex;
+          }
+          svg {
+            height: 2.2rem;
+            width: 2.2rem;
+          }
+        }
+
+        &Enter {
+          top: calc(90% + var(--spacingExtraTight));
+          opacity: 0;
+        }
+        &EnterActive {
+          opacity: 0;
+        }
+        &EnterDone {
+          opacity: 100%;
+        }
+        &Exit {
+          opacity: 100%;
+        }
+        &ExitActive {
+          opacity: 0;
+        }
+        &ExitDone {
+          top: calc(90% + var(--spacingExtraTight));
+          opacity: 0;
         }
       }
     }

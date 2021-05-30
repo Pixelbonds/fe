@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { getStrapiURL } from 'helpers';
 import { Provider } from 'next-auth/client';
 import 'styles/global.scss';
 
